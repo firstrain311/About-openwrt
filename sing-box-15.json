@@ -17,7 +17,7 @@
   "route": {
     "rules": [
       { "port": 53, "action": "hijack-dns" },
-      { "ip_is_private": true, "action": "direct" },
+      { "ip_is_private": true, "action": "route", "outbound": "direct" },
       { "rule_set": "bilibili", "outbound": "bilibili" },
       { "rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "netflix" },
       { "rule_set": "bahamut", "outbound": "bahamut" },
